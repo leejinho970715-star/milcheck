@@ -22,6 +22,7 @@ fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
 
 fs.copyFileSync(path.join(src, 'styles.css'), path.join(dist, 'styles.css'));
+fs.copyFileSync(path.join(src, 'enhancements.css'), path.join(dist, 'enhancements.css'));
 const appSource = fs.readFileSync(path.join(src, 'app.js'), 'utf8')
   .replaceAll('href="/', 'href="/milcheck/')
   .replaceAll('src="/', 'src="/milcheck/');
