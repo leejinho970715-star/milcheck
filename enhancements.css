@@ -1,0 +1,80 @@
+/* Layout refinements requested after public visual review. */
+.content > .wrap > .card + .section-title,
+.content > .wrap > .grid + .section-title {
+  margin-top: 52px;
+}
+
+.table-wrap + .notice,
+.result + .checklist,
+.checklist + .notice,
+.notice + .criteria-controls,
+.criteria-controls + #criteria-count,
+.sim-panel > .notice + .grid,
+.sim-panel > .choice-grid + .source {
+  margin-top: 24px;
+}
+
+.section-title + .checklist {
+  margin-top: 28px;
+}
+
+.criteria-controls select {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 44px 0 14px;
+  border: 1px solid #bad1c5;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #18382d;
+  font: inherit;
+}
+
+.criteria-controls select:focus {
+  border-color: #377a63;
+  outline: 3px solid #bfe8d5;
+}
+
+.validation-error {
+  margin: 22px 0 0;
+  padding: 14px 16px;
+  border: 1px solid #e4a6a6;
+  border-radius: 12px;
+  background: #fff1f1;
+  color: #8a2525;
+  font-weight: 750;
+}
+
+.sim-panel .choice-grid,
+.sim-panel .grid.two {
+  margin-top: 26px;
+}
+
+.sim-panel .notice {
+  margin-top: 22px;
+}
+
+.choice input,
+.checklist input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.choice:has(input:checked),
+.checklist label:has(input:checked) {
+  border-color: #66a88e;
+  background: #f0faf5;
+}
+
+.sim-nav .btn:disabled {
+  cursor: not-allowed;
+  opacity: .45;
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  .content > .wrap > .card + .section-title,
+  .content > .wrap > .grid + .section-title {
+    margin-top: 40px;
+  }
+}
