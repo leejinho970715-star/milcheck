@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /simulation?*
+Disallow: /milcheck/simulation?*
 Sitemap: https://leejinho970715-star.github.io/milcheck/sitemap.xml
