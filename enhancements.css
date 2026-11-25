@@ -10,6 +10,7 @@
 .notice + .criteria-controls,
 .criteria-controls + #criteria-count,
 .sim-panel > .notice + .grid,
+.sim-panel > .notice + .checklist,
 .sim-panel > .choice-grid + .source {
   margin-top: 24px;
 }
@@ -76,5 +77,9 @@
   .content > .wrap > .card + .section-title,
   .content > .wrap > .grid + .section-title {
     margin-top: 40px;
+  }
+
+  .sim-panel > .notice + .checklist {
+    margin-top: 20px;
   }
 }
