@@ -36,7 +36,8 @@ ${feature('04','검사 준비 가이드','검사 절차와 지참할 서류를 �
 <section class="section"><div class="wrap"><div class="section-title"><span class="eyebrow">신체등급</span><h2>등급과 병역처분은 같은 말이 아닙니다</h2><p>신체등급은 검사 결과에 따른 분류이고, 병역처분은 법률에 따라 자질 등을 종합해 결정됩니다.</p></div>${gradeCards()}${official}</div></section>
 <section class="section alt"><div class="wrap privacy-box"><img src="/milcheck/assets/privacy-3d.png" alt="개인정보 보호를 나타내는 3D 방패와 자물쇠"><div><span class="eyebrow">Privacy by design</span><h2>민감한 건강정보, 저장하지 않습니다.</h2><p>입력값은 현재 브라우저 메모리 안에서만 계산됩니다. URL·localStorage·sessionStorage에 건강정보를 남기지 않으며 새로고침하면 초기화됩니다.</p><a class="btn secondary" href="/milcheck/privacy/">처리 방식 자세히 보기</a></div></div></section>
 <section class="section"><div class="wrap">${faqBlock(4)}</div></section><section class="section"><div class="wrap cta"><div><span>무료 · 회원가입 없음</span><h2>병역판정검사, 이제 미리 준비하세요.</h2></div><a class="btn secondary" href="/milcheck/simulation/">모의 검사 시작하기</a></div></section>`}
-function feature(n,t,d,url,img){return `<article class="card"><span class="number">${n}</span><img src="${img}" alt=""><h3>${t}</h3><p>${d}</p><a class="btn ghost small" href="${url}">확인하기</a></article>`}
+const basePath='/milcheck';
+function feature(n,t,d,url,img){return `<article class="card"><span class="number">${n}</span><img src="${basePath}${img}" alt=""><h3>${t}</h3><p>${d}</p><a class="btn ghost small" href="${basePath}${url}">확인하기</a></article>`}
 function stepCard(n,t,d){return `<article class="card"><span class="number">STEP ${n}</span><h3>${t}</h3><p>${d}</p></article>`}
 function gradeCards(){const data=[['1급','현역병입영 대상'],['2급','현역병입영 대상'],['3급','현역병입영 대상'],['4급','보충역'],['5급','전시근로역'],['6급','병역면제'],['7급','재신체검사']];return `<div class="grade-grid">${data.map(x=>`<div class="grade"><strong>${x[0]}</strong><span>${x[1]}</span></div>`).join('')}</div><p class="source">※ 1~4급의 실제 병역처분은 병역법에 따라 자질 등을 고려해 결정되므로 신체등급만으로 단정할 수 없습니다.</p>`}
 
