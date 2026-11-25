@@ -43,6 +43,7 @@ for (const route of routes) {
 const urls = ['', ...routes.filter(Boolean)].map(r => `<url><loc>${origin}/${r}</loc><lastmod>2026-11-26</lastmod></url>`).join('');
 fs.writeFileSync(path.join(dist, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
 fs.writeFileSync(path.join(dist, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /simulation?*\nSitemap: ${origin}/sitemap.xml\n`);
+fs.writeFileSync(path.join(dist, '.nojekyll'), '');
 fs.writeFileSync(path.join(dist, 'site.webmanifest'), JSON.stringify({name:'MILCHECK 병역판정검사 모의 시뮬레이터',short_name:'MILCHECK',start_url:'/milcheck/',display:'standalone',background_color:'#f6faf7',theme_color:'#377a63',icons:[{src:'/milcheck/assets/icon-192.png',sizes:'192x192',type:'image/png'},{src:'/milcheck/assets/icon-512.png',sizes:'512x512',type:'image/png'}]}, null, 2));
 fs.writeFileSync(path.join(dist, '404.html'), template.replaceAll('__PREFIX__', '').replaceAll('__ROUTE__', '404').replaceAll('__TITLE__', '페이지를 찾을 수 없습니다 | MILCHECK').replaceAll('__DESC__', '요청한 MILCHECK 페이지를 찾을 수 없습니다.').replaceAll('__CANONICAL__', `${origin}/404.html`).replaceAll('__OG__', `${origin}/assets/og-default.png`));
 fs.cpSync(path.join(root, '.openai'), path.join(dist, '.openai'), { recursive: true });
