@@ -27,6 +27,7 @@ fs.mkdirSync(dist, { recursive: true });
 
 fs.copyFileSync(path.join(src, 'styles.css'), path.join(dist, 'styles.css'));
 fs.copyFileSync(path.join(src, 'enhancements.css'), path.join(dist, 'enhancements.css'));
+fs.copyFileSync(path.join(src, 'adfit.css'), path.join(dist, 'adfit.css'));
 const appSource = fs.readFileSync(path.join(src, 'app.js'), 'utf8')
   .replace("const basePath='/milcheck';", `const basePath='${basePath}';`)
   .replaceAll('https://leejinho970715-star.github.io/milcheck', origin)

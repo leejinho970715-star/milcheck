@@ -1,0 +1,8 @@
+.adfit-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 132px;
+  padding: 16px 20px;
+  background: #f8fbf9;
+}
